@@ -1,0 +1,2 @@
+ -p xc7z020clg484-1 -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT) -toplevel no -ti project_core_i -msg __xps/ise/xmsgprops.lst
+
