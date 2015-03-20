@@ -25,19 +25,19 @@ end mult_pipe;
 -- returns a value whose width is the sum of the widths of the inputs.
 
 architecture BHV of mult_pipe is
-signal in1_temp: unsigned(width downto 0);
-signal in2_temp: signed(width downto 0);
-signal mult_temp: signed(width*2-1 downto 0);
+signal in1_sign: signed(width downto 0);
+signal in2_sign: signed(width downto 0);
+signal mult_temp: signed(17 downto 0);
 begin
-in1_temp<=signed(in1);
-in2_temp<=signed(in2);
-mult_temp<=in1_temp*in2_temp;
-process(clk,rst)
+in1_sign<='0' & signed(in1);
+in2_sign<=resize(signed(in2), 9);
+mult_temp<=in1_sign*in2_sign;
+process(clk,rst,in2)
 begin
 	IF(rst='1') THEN output<=(OTHERS=>'0');
 	ELSIF(clk'EVENT AND clk='1') THEN
 		IF(en='1') THEN
-			output<=std_logic_vector(mult_temp);
+			output<=std_logic_vector(resize(mult_temp, 16));
 		END IF;
 	END IF;
 end process;

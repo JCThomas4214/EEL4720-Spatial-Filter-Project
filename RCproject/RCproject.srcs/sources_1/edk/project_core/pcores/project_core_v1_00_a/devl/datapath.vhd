@@ -44,6 +44,8 @@ PORT(
 		en		:	IN std_logic;
 		clk	:	IN std_logic;
 		rst	:	IN std_logic;
+		valid_in:IN std_logic;
+		valid_out:OUT std_logic;
 		a_1	: OUT std_logic_vector(width-1 downto 0));
 end datapath;
 
@@ -51,10 +53,12 @@ architecture Behavioral of datapath is
 constant neg_one: std_logic_vector(7 downto 0) := "11111111";
 constant nine:	std_logic_vector(15 downto 0) := "0000000000001001";
 constant zero: std_logic_vector (7 downto 0) := "00000000";
+SIGNAL valid_buff1,valid_buff2,valid_buff3,valid_buff4,valid_buff5,valid_buff6: std_logic;
 signal r1_multout,r2_multout,r3_multout,p1_multout,p2_multout,p3_multout,q1_multout,q2_multout,q3_multout, all_divout : std_logic_vector(15 downto 0) := (OTHERS=>'0'); 
 signal r1r2_addout,r3p1_addout, p2p3_addout, q1q2_addout, q3_regout1, q3_regout2, q3_regout3, r1r2r3p1_addout, p2p3q1q2_addout, r1r2r3p1p2p3q1q2_addout, all_addout: std_logic_vector(15 downto 0) := (OTHERS=>'0');
 signal mux_out: std_logic_vector(7 downto 0) := "00000000";
 signal neg_muxin: std_logic := '0';
+signal r_1_temp, r_2_temp, r_3_temp, p_1_temp, p_2_temp, p_3_temp, q_1_temp, q_2_temp, q_3_temp: std_logic_vector(8 downto 0) := "000000000";
 component add_pipe
 generic (width  :     positive := 16);
 PORT(
@@ -173,6 +177,14 @@ PORT MAP(clk=>clk,
 			in1=>q_3,
 			in2=>neg_one,
 			output=>q3_multout);
+VALID1: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_in,
+			output(0)=>valid_buff1);
+			
 --Stage 2 Pipeline
 ADD_R1R2: add_pipe
 PORT MAP(clk=>clk,
@@ -209,6 +221,13 @@ PORT MAP(clk=>clk,
 			en=>en,
 			input=>q3_multout,
 			output=>q3_regout1);
+VALID2: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_buff1,
+			output(0)=>valid_buff2);	
 --Stage 3 Pipeline
 ADD_R1R2R3P1: add_pipe
 PORT MAP(clk=>clk,
@@ -231,6 +250,13 @@ PORT MAP(clk=>clk,
 			en=>en,
 			input=>q3_regout1,
 			output=>q3_regout2);
+VALID3: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_buff2,
+			output(0)=>valid_buff3);
 --Stage 4 Pipeline
 ADD_R1R2R3P1P2P3Q1Q2: add_pipe
 PORT MAP(clk=>clk,
@@ -246,6 +272,13 @@ PORT MAP(clk=>clk,
 			en=>en,
 			input=>q3_regout2,
 			output=>q3_regout3);
+VALID4: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_buff3,
+			output(0)=>valid_buff4);
 --Stage 5 Pipeline
 ADD_ALL: add_pipe
 PORT MAP(clk=>clk,
@@ -254,6 +287,13 @@ PORT MAP(clk=>clk,
 			in1=>r1r2r3p1p2p3q1q2_addout,
 			in2=>q3_regout3,
 			output=>all_addout);
+VALID5: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_buff4,
+			output(0)=>valid_buff5);
 --Stage 6 Pipeline
 DIVIDE_ALL: div_pipe
 PORT MAP(num=>all_addout,
@@ -262,6 +302,13 @@ PORT MAP(num=>all_addout,
 			rst=>rst,
 			en=>en,
 			result=>all_divout);
+VALID6: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_buff5,
+			output(0)=>valid_buff6);
 --Stage 7 Pipeline
 NEG_CHECK: comparator
 GENERIC MAP(width=>16)
@@ -279,5 +326,12 @@ PORT MAP(clk=>clk,
 			en=>en,
 			input=>mux_out,
 			output=>a_1);
+VALID7: reg
+GENERIC MAP(width=>1)
+PORT MAP(clk=>clk,
+			rst=>rst,
+			en=>en,
+			input(0)=>valid_buff6,
+			output(0)=>valid_out);
 end Behavioral;
 

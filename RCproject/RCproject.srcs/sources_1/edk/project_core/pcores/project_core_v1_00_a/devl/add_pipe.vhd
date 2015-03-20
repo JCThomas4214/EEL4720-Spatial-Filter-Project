@@ -32,7 +32,7 @@ entity add_pipe is
     en     : in  std_logic;
     in1    : in  std_logic_vector(width-1 downto 0);
     in2    : in  std_logic_vector(width-1 downto 0);
-    output : out std_logic_vector(width downto 0));
+    output : out std_logic_vector(width-1 downto 0));
 end add_pipe;
 
 -- TODO: Implement a behavioral description of a pipelined adder (i.e., an
@@ -41,12 +41,23 @@ end add_pipe;
 -- hardcoded to a specific value.
 
 architecture BHV of add_pipe is
-signal temp_in1: signed(width downto 0) := (OTHERS=>'0');
-signal temp_in2: signed(width downto 0) := (OTHERS=>'0');
-signal temp_add: signed(width downto 0) := (OTHERS=>'0');
+--<<<<<<< .mine
+signal temp_in1: signed(width-1 downto 0) := (OTHERS=>'0');
+signal temp_in2: signed(width-1 downto 0) := (OTHERS=>'0');
+signal temp_add: signed(width-1 downto 0) := (OTHERS=>'0');
+--=======
+--signal temp_in1: signed(width downto 0) := (OTHERS=>'0');
+--signal temp_in2: signed(width downto 0) := (OTHERS=>'0');
+--signal temp_add: signed(width downto 0) := (OTHERS=>'0');
+-->>>>>>> .r10
 begin
-temp_in1<=signed('0' & in1);
-temp_in2<=signed('0' & in2);
+--<<<<<<< .mine
+temp_in1<=signed(in1);
+temp_in2<=signed(in2);
+--=======
+--temp_in1<=signed('0' & in1);
+--temp_in2<=signed('0' & in2);
+-->>>>>>> .r10
 temp_add<=temp_in1+temp_in2;
 process(clk,rst)
 begin

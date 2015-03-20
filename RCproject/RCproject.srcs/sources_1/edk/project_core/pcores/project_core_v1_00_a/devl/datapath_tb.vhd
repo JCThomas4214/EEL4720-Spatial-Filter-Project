@@ -53,6 +53,8 @@ ARCHITECTURE behavior OF datapath_tb IS
          en : IN  std_logic;
          clk : IN  std_logic;
          rst : IN  std_logic;
+			valid_in:IN std_logic;
+			valid_out:OUT std_logic;
          a_1 : OUT  std_logic_vector(7 downto 0)
         );
     END COMPONENT;
@@ -71,9 +73,11 @@ ARCHITECTURE behavior OF datapath_tb IS
    signal en : std_logic := '0';
    signal clk : std_logic := '0';
    signal rst : std_logic := '0';
+	signal valid_in: std_logic := '0';
 
  	--Outputs
    signal a_1 : std_logic_vector(7 downto 0);
+	signal valid_out : std_logic;
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -94,6 +98,8 @@ BEGIN
           en => en,
           clk => clk,
           rst => rst,
+			 valid_in=>valid_in,
+			 valid_out=>valid_out,
           a_1 => a_1
         );
 
@@ -129,6 +135,7 @@ BEGIN
 		wait for 100 ns;
 		rst<='0';
 		en<='1';
+		valid_in<='1';
 		wait for 10 ns;
 		r_1<="00000100";
 		r_2<="00001000";
@@ -154,11 +161,13 @@ BEGIN
 		r_2<="00001000";
 		r_3<="00001100";
 		p_1<="00011000";
-		p_2<="11001111";
+		p_2<="00000001";
 		p_3<="00001111";
 		q_1<="00011000";
 		q_2<="00001100";
 		q_3<="01000001";
+		wait for 10 ns;
+		valid_in<='0';
       wait;
    end process;
 
