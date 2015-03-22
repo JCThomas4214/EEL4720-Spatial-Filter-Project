@@ -67,7 +67,7 @@ begin
 		elsif (clk'event and clk = '1') then		
 			state <= nextstate;		
 			if state = inLatency then
-				if count1 > 2 then
+				if count1 > 2 then -- 2 is the # of clocks before the smart buffer outputs fully
 					state <= go_0;
 				else 
 					count1 <= count1 + 1;
@@ -78,8 +78,8 @@ begin
 				else
 					pixel <= pixel + 9;
 				end if;
-			elsif state = outLatency then
-				if count2 > 11 then
+			elsif state = outLatency then 
+				if count2 > 8 then	-- 8 is the # of clocks before the the last pixels output through the datapath
 					state <= done_0;
 				else
 					count2 <= count2 + 1;
