@@ -34,16 +34,16 @@ generic(width : positive := 8);
 port(
 	go, clk, rst : in std_logic := '0';
 	row_length, col_length : in std_logic_vector(10 downto 0) := (others => '0');
-	ctrl_rst, sb_rst, addr_gen_rst, ctrl_en, smart_buff_en, done, INaddrEN : out std_logic := '0';
-	pixel_count : out std_logic_vector(20 downto 0) := (others => '0')
+	dp_rst, sb_rst, addr_gen_rst, dp_en, sb_en : out std_logic := '0';
+	done, inputAddr, inputMem, valid_in : out std_logic := '0'	
 );
 end master_ctrl;
 
 architecture Behavioral of master_ctrl is
 
-	type CtrlState is (init, wait_0, latency, go_0, done_0);
+	type CtrlState is (init, wait_0, inLatency, go_0, outLatency, done_0);
 	signal state, nextstate : CtrlState := Init;
-	signal count : unsigned(7 downto 0) := (others => '0');
+	signal count1, count2 : unsigned(7 downto 0) := (others => '0');
 	signal row_un, col_un : unsigned(10 downto 0) := (others => '0');
 	signal max_pixel : unsigned(21 downto 0) := (others => '0');
 	signal pixel : unsigned(20 downto 0) := (others => '0');
@@ -56,29 +56,33 @@ begin
 	process(rst, clk)
 	begin
 		
-		ctrl_rst <= '0';
+		dp_rst <= '0';
 		sb_rst <= '0';
-		addr_gen_rst <= '0';
-		ctrl_en <= '0';
+		addr_gen_rst <= '0';		
 	
-		if rst = '1' then
-			ctrl_rst <= '1';
+		if rst = '1' then			
 			sb_rst <= '1';
+			dp_rst <= '1';			
 			addr_gen_rst <= '1';
 		elsif (clk'event and clk = '1') then		
 			state <= nextstate;		
-			if state = latency then
-				if count >= 11 then
+			if state = inLatency then
+				if count1 > 2 then
 					state <= go_0;
 				else 
-					count <= count + 1;
-				end if;
-			end if;
-			if state = go_0 then
-				if pixel >= max_pixel then
-					state <= done_0;
+					count1 <= count1 + 1;
+				end if;			
+			elsif state = go_0 then
+				if pixel > (max_pixel) then 
+					state <= outLatency;
 				else
 					pixel <= pixel + 9;
+				end if;
+			elsif state = outLatency then
+				if count2 > 11 then
+					state <= done_0;
+				else
+					count2 <= count2 + 1;
 				end if;
 			end if;
 		end if;
@@ -87,27 +91,41 @@ begin
 	process(state, go)
 	begin
 		done <= '0';
-		INaddrEN <= '0';
+		inputAddr <= '0';	
+		inputMem <= '0';
+		sb_en <= '0';
+		dp_en <= '0';
+		valid_in <= '0';
 		
 		case state is
 			when init => 
 				nextstate <= wait_0;
 			when wait_0 =>
 				if go = '1' then
-					INaddrEN <= '1';
-					nextstate <= latency;
+					inputAddr <= '1';	
+					inputMem <= '1';
+					sb_en <= '1';										
+					nextstate <= inLatency;
 				end if;
-			when latency =>
-				INaddrEN <= '1';
-				nextstate <= latency;
+			when inLatency =>
+				inputAddr <= '1';	
+				inputMem <= '1';
+				sb_en <= '1';				
+				nextstate <= inLatency;
 			when go_0 => 
-				INaddrEN <= '1';
+				valid_in <= '1';
+				inputAddr <= '1';	
+				inputMem <= '1';	
+				dp_en <= '1';
+				sb_en <= '1';
 				nextstate <= go_0;
+			when outLatency =>
+				dp_en <= '1';
+				nextstate <= outLatency;
 			when done_0 =>
 				done <= '1';
 				nextstate <= done_0;
 		end case;
-	end process;
-	pixel_count <= std_logic_vector(pixel);
+	end process;	
 end Behavioral;
 

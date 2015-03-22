@@ -46,14 +46,14 @@ ARCHITECTURE behavior OF master_ctrl_tb IS
          rst : IN  std_logic;
          row_length : IN  std_logic_vector(10 downto 0);
          col_length : IN  std_logic_vector(10 downto 0);
-         ctrl_rst : OUT  std_logic;
+         dp_rst : OUT  std_logic;
          sb_rst : OUT  std_logic;
          addr_gen_rst : OUT  std_logic;
-         ctrl_en : OUT  std_logic;
-         smart_buff_en : OUT  std_logic;
+         dp_en : OUT  std_logic;
+         sb_en : OUT  std_logic;
          done : OUT  std_logic;
-         INaddrEN : OUT  std_logic;
-         pixel_count : OUT  std_logic_vector(20 downto 0)
+         inputAddr : OUT  std_logic;
+			inputMem : OUT  std_logic
         );
     END COMPONENT;
     
@@ -66,14 +66,14 @@ ARCHITECTURE behavior OF master_ctrl_tb IS
    signal col_length : std_logic_vector(10 downto 0) := (others => '0');
 
  	--Outputs
-   signal ctrl_rst : std_logic;
+   signal dp_rst : std_logic;
    signal sb_rst : std_logic;
    signal addr_gen_rst : std_logic;
-   signal ctrl_en : std_logic;
-   signal smart_buff_en : std_logic;
+   signal dp_en : std_logic;
+   signal sb_en : std_logic;
    signal done : std_logic;
-   signal INaddrEN : std_logic;
-   signal pixel_count : std_logic_vector(20 downto 0);
+   signal inputAddr : std_logic; 
+	signal inputMem : std_logic;	
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -87,14 +87,14 @@ BEGIN
           rst => rst,
           row_length => row_length,
           col_length => col_length,
-          ctrl_rst => ctrl_rst,
+          dp_rst => dp_rst,
           sb_rst => sb_rst,
           addr_gen_rst => addr_gen_rst,
-          ctrl_en => ctrl_en,
-          smart_buff_en => smart_buff_en,
+          dp_en => dp_en,
+          sb_en => sb_en,
           done => done,
-          INaddrEN => INaddrEN,
-          pixel_count => pixel_count
+          inputAddr => inputAddr,
+			 inputMem => inputMem
         );
 
    -- Clock process definitions
@@ -113,13 +113,16 @@ BEGIN
 		rst <= '1';
       -- hold reset state for 100 ns.
       wait for 100 ns;	
-		row_length <= std_logic_vector(to_unsigned(256,11));
-		col_length <= std_logic_vector(to_unsigned(256,11));
+		row_length <= std_logic_vector(to_unsigned(64,11));
+		col_length <= std_logic_vector(to_unsigned(64,11));
       wait for clk_period*10;
 
       -- insert stimulus here 
 		rst <= '0';
 		go <= '1';
+		wait for 20 ns;
+		go<= '0';
+		
 
       wait;
    end process;
