@@ -51,7 +51,7 @@ begin
 		elsif (clk'event and clk = '1') then
 			if en = '1' then
 				tmpNEW <= input;
-				tmp <= tmpOLD & tmpNEW;
+				tmp <= tmpNEW & tmpOLD;
 				tmpOLD <= tmpNEW;				
 			end if;			
 		end if;		

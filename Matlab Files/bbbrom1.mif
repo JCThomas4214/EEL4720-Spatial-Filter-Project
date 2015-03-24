@@ -1,0 +1,10 @@
+--  64x 64 Grey Scale Image
+
+WIDTH = 72;
+DEPTH = 3968;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT BEGIN
+END;
