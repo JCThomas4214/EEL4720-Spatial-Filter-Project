@@ -1,0 +1,18 @@
+function [ rows, cols ] = filter( infile, numrows, numcols)
+
+img = rgb2gray(imread(infile));
+pic = zeros(256,256);
+
+imgresized = imresize(img, [numrows numcols]);
+[rows, cols, rgb] = size(imgresized);
+
+for r = 1:rows
+    for c = 1:cols		
+		pic(r,c) = uint8(imgresized(r,c));        
+    end
+end
+
+
+
+end
+

@@ -70,14 +70,15 @@ Slave Reg 18: BRAM P DATA IN (Top 8 Bits) (Write)
 Slave Reg 19: BRAM Q DATA IN (Lower 32 Bits) (Write)
 Slave Reg 20: BRAM Q DATA IN (Middle 32 Bits) (Write)
 Slave Reg 21: BRAM Q DATA IN (Top 8 Bits) (Write)
-
 */
 
 
 int main(void)
 {
 
-	int done,i,j;
+	int done = 0;
+	int i = 0;
+	int j = 0;
 	int pixel_int=904;
 	int total_pixel=65024;
 	int hwOutput1[904], hwOutput0[904];
@@ -102,7 +103,7 @@ done= PROJECT_CORE_mReadSlaveReg2(PROJECT_CORE_BASE_ADDRESS, 0);
 while(done==0)
 {
     printf("the done is %d\n",done);
-    done= PROJECT_CORE_mReadSlaveReg2(PROJECT_CORE_BASE_ADDRESS, 0);
+    //done= PROJECT_CORE_mReadSlaveReg2(PROJECT_CORE_BASE_ADDRESS, 0);
 }
 printf("the done is %d\n",done);
 
