@@ -1,0 +1,249 @@
+13:47:38 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../project_11_mod_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../project_11_mod_hw_platform/system.xml -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling standalone"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+13:49:08 **** Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try11.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try11.elf  |tee "try11.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1096	  29780	  53748	   d1f4	try11.elf
+'Finished building: try11.elf.size'
+' '
+13:49:31 **** Auto Build of configuration Debug for project try11 ****
+make all 
+make: Nothing to be done for `all'.
+13:49:43 **** Auto Build of configuration Debug for project try11 ****
+make all 
+make: Nothing to be done for `all'.
+13:51:02 **** Auto Build of configuration Debug for project try11 ****
+make all 
+make: Nothing to be done for `all'.
+13:57:30 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:13:26: fatal error: xbasic_types.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+13:57:42 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:140:5: warning: implicit declaration of function 'PROJECT11_REDUCED_mReadSlaveReg31' [-Wimplicit-function-declaration]
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\try11\try11.sdk\SDK\SDK_Export\try11\Debug/../src/helloworld.c:140: undefined reference to `PROJECT11_REDUCED_mReadSlaveReg31'
+collect2.exe: error: ld returned 1 exit status
+make: *** [try11.elf] Error 1
+13:57:57 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try11.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try11.elf  |tee "try11.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63900	 197336	  29852	 291088	  47110	try11.elf
+'Finished building: try11.elf.size'
+' '
+14:00:07 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try11.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try11.elf  |tee "try11.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63924	 197336	  29852	 291112	  47128	try11.elf
+'Finished building: try11.elf.size'
+' '
+14:00:42 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try11.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try11.elf  |tee "try11.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63940	 197336	  29852	 291128	  47138	try11.elf
+'Finished building: try11.elf.size'
+' '
+14:03:35 **** Clean-only build of configuration Debug for project try11 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  try11.elf.size  try11.elf
+' '
+14:03:36 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try11.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try11.elf  |tee "try11.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63940	 197336	120725276	120986552	7361bb8	try11.elf
+'Finished building: try11.elf.size'
+' '
+14:13:49 **** Build of project standalone_bsp_0 ****
+make -k all 
+'Finished building libraries'
+14:13:49 **** Build of configuration Debug for project try11 ****
+make all 
+make: Nothing to be done for `all'.
+14:21:21 **** Auto Build of configuration Debug for project try11 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT11_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try11.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try11.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try11.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try11.elf  |tee "try11.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63948	 197336	120725276	120986560	7361bc0	try11.elf
+'Finished building: try11.elf.size'
+' '
+14:21:51 **** Incremental Build of configuration Debug for project try11 ****
+make all 
+make: Nothing to be done for `all'.

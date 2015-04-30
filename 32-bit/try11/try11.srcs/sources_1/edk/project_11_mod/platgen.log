@@ -1,0 +1,174 @@
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc7z020clg484-1 -lang vhdl -intstyle pa -toplevel no
+-ti project_11_mod_i -msg __xps/ise/xmsgprops.lst project_11_mod.mhs 
+
+Parse C:/try11/try11.srcs/sources_1/edk/project_11_mod/project_11_mod.mhs ...
+
+Read MPD definitions ...
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP0_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 300 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP1_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 304 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP2_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 308 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP3_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 312 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_NUM_F2P_INTR_INPUTS value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 319 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+
+Computing clock values...
+INFO:EDK:1432 - Frequency for Top-Level Input Clock
+   'processing_system7_0_PS_CLK' is not specified. Clock DRCs will not be
+   performed for IPs connected to that clock port, unless they are connected
+   through the clock generator IP. 
+
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - INFO: DDR Base and High address in current configuration is
+   0x00000000 and 0x1FFFFFFF respectively. 
+INFO:EDK - INFO: You can modify the DDR address range accessed by Programmable
+   Logic through the processing_system7 AXI slave interfaces. If MicroBlaze is a
+   master on processing_system7 AXI slave interfaces, please use the top half of
+   the address range (Base Address = 0x10000000; High Address = 0x1FFFFFFF). For
+   all other master, any subset of the DDR address can be used. See Xilinx
+   Answer 47167 for more information. 
+Address Map for Processor processing_system7_0
+  (0x6be00000-0x6be0ffff) project11_timer_0	axi_interconnect_1
+  (0x7a000000-0x7a01ffff) project11_reduced_0	axi_interconnect_1
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 2
+slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK1_BUF value to FALSE -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 351 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK2_BUF value to FALSE -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 352 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK3_BUF value to FALSE -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_03_a\data\processing_system7_v2_1_0.mpd line 353 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi_interconnect_1.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: No asynchronous clock conversions in axi_interconnect axi_interconnect_1.
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+IPNAME:project11_reduced INSTANCE:project11_reduced_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 124 -
+Copying (BBD-specified) netlist files.
+IPNAME:project11_timer INSTANCE:project11_timer_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 141 -
+Copying (BBD-specified) netlist files.
+
+Managing cache ...
+
+Elaborating instances ...
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:processing_system7_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 37 -
+Running XST synthesis
+INSTANCE:project11_reduced_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 124 -
+Running XST synthesis
+INSTANCE:axi_interconnect_1 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 133 -
+Running XST synthesis
+INSTANCE:project11_timer_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 141 -
+Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:project_11_mod_project11_reduced_0_wrapper INSTANCE:project11_reduced_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 124 -
+Running NGCBUILD
+IPNAME:project_11_mod_axi_interconnect_1_wrapper INSTANCE:axi_interconnect_1 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 133 -
+Running NGCBUILD
+IPNAME:project_11_mod_project11_timer_0_wrapper INSTANCE:project11_timer_0 -
+C:\try11\try11.srcs\sources_1\edk\project_11_mod\project_11_mod.mhs line 141 -
+Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/project_11_mod.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 213.00 seconds

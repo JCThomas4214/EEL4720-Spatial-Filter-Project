@@ -1,0 +1,25 @@
+##############################################################################
+## Filename:          C:\try11\try11.srcs\sources_1\edk\project_11_mod\pcores/project11_reduced_v1_00_a/data/project11_reduced_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Apr 22 13:08:49 2015 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a all vhdl
+lib axi_lite_ipif_v1_01_a all vhdl
+lib project11_reduced_v1_00_a user_logic vhdl
+lib project11_reduced_v1_00_a project11_reduced vhdl
+lib project11_reduced_v1_00_a bramout vhdl
+lib project11_reduced_v1_00_a bramp vhdl
+lib project11_reduced_v1_00_a bramq vhdl
+lib project11_reduced_v1_00_a bramr vhdl
+lib project11_reduced_v1_00_a add_pipe vhdl
+lib project11_reduced_v1_00_a addr_gen vhdl
+lib project11_reduced_v1_00_a comparator vhdl
+lib project11_reduced_v1_00_a datapath vhdl
+lib project11_reduced_v1_00_a div_pipe vhdl
+lib project11_reduced_v1_00_a master_ctrl vhdl
+lib project11_reduced_v1_00_a mult_pipe vhdl
+lib project11_reduced_v1_00_a mux vhdl
+lib project11_reduced_v1_00_a reg vhdl
+lib project11_reduced_v1_00_a smart_buff vhdl
+lib project11_reduced_v1_00_a top_level vhdl

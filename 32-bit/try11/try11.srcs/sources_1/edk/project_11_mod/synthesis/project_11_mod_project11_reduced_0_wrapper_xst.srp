@@ -1,0 +1,1943 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\try11\try11.srcs\sources_1\edk\project_11_mod\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "project_11_mod_project11_reduced_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\try11\try11.srcs\sources_1\edk\project_11_mod\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc7z020clg484-1
+Output File Name                   : "../implementation/project_11_mod_project11_reduced_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : project_11_mod_project11_reduced_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family.vhd" into library proc_common_v3_00_a
+Parsing package <family>.
+Parsing package body <family>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/family_support.vhd" into library proc_common_v3_00_a
+Parsing package <family_support>.
+Parsing package body <family_support>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/coregen_comp_defs.vhd" into library proc_common_v3_00_a
+Parsing package <coregen_comp_defs>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/common_types_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <Common_Types>.
+Parsing package body <Common_Types>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/proc_common_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <proc_common_pkg>.
+Parsing package body <proc_common_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/conv_funs_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <conv_funs_pkg>.
+Parsing package body <conv_funs_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_pkg.vhd" into library proc_common_v3_00_a
+Parsing package <ipif_pkg>.
+Parsing package body <ipif_pkg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/async_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <async_fifo_fg>.
+Parsing architecture <implementation> of entity <async_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/sync_fifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <sync_fifo_fg>.
+Parsing architecture <implementation> of entity <sync_fifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/basic_sfifo_fg.vhd" into library proc_common_v3_00_a
+Parsing entity <basic_sfifo_fg>.
+Parsing architecture <implementation> of entity <basic_sfifo_fg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/blk_mem_gen_wrapper.vhd" into library proc_common_v3_00_a
+Parsing entity <blk_mem_gen_wrapper>.
+Parsing architecture <implementation> of entity <blk_mem_gen_wrapper>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/addsub.vhd" into library proc_common_v3_00_a
+Parsing entity <addsub>.
+Parsing architecture <imp> of entity <addsub>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_bit>.
+Parsing architecture <imp> of entity <counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter.vhd" into library proc_common_v3_00_a
+Parsing entity <Counter>.
+Parsing architecture <imp> of entity <counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr>.
+Parsing architecture <imp> of entity <direct_path_cntr>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/direct_path_cntr_ai.vhd" into library proc_common_v3_00_a
+Parsing entity <direct_path_cntr_ai>.
+Parsing architecture <imp> of entity <direct_path_cntr_ai>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/down_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <down_counter>.
+Parsing architecture <simulation> of entity <down_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/eval_timer.vhd" into library proc_common_v3_00_a
+Parsing entity <eval_timer>.
+Parsing architecture <imp> of entity <eval_timer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/inferred_lut4.vhd" into library proc_common_v3_00_a
+Parsing entity <inferred_lut4>.
+Parsing architecture <implementation> of entity <inferred_lut4>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer.vhd" into library proc_common_v3_00_a
+Parsing entity <IPIF_Steer>.
+Parsing architecture <IMP> of entity <ipif_steer>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_steer128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_steer128>.
+Parsing architecture <IMP> of entity <ipif_steer128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ipif_mirror128.vhd" into library proc_common_v3_00_a
+Parsing entity <ipif_mirror128>.
+Parsing architecture <IMP> of entity <ipif_mirror128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg>.
+Parsing architecture <imp> of entity <ld_arith_reg>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/ld_arith_reg2.vhd" into library proc_common_v3_00_a
+Parsing entity <ld_arith_reg2>.
+Parsing architecture <imp> of entity <ld_arith_reg2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot>.
+Parsing architecture <imp> of entity <mux_onehot>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_bits.vhd" into library proc_common_v3_00_a
+Parsing entity <or_bits>.
+Parsing architecture <implementation> of entity <or_bits>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy>.
+Parsing architecture <implementation> of entity <or_muxcy>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate>.
+Parsing architecture <imp> of entity <or_gate>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate128.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate128>.
+Parsing architecture <imp> of entity <or_gate128>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder_bit>.
+Parsing architecture <implementation> of entity <pf_adder_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_adder.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_adder>.
+Parsing architecture <implementation> of entity <pf_adder>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_bit.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_bit>.
+Parsing architecture <implementation> of entity <pf_counter_bit>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter>.
+Parsing architecture <implementation> of entity <pf_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_counter_top>.
+Parsing architecture <implementation> of entity <pf_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter>.
+Parsing architecture <implementation> of entity <pf_occ_counter>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_occ_counter_top.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_occ_counter_top>.
+Parsing architecture <implementation> of entity <pf_occ_counter_top>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pf_dpram_select.vhd" into library proc_common_v3_00_a
+Parsing entity <pf_dpram_select>.
+Parsing architecture <implementation> of entity <pf_dpram_select>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect>.
+Parsing architecture <imp> of entity <pselect>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_mask.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_mask>.
+Parsing architecture <imp> of entity <pselect_mask>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl16_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <srl16_fifo>.
+Parsing architecture <implementation> of entity <srl16_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo.vhd" into library proc_common_v3_00_a
+Parsing entity <SRL_FIFO>.
+Parsing architecture <IMP> of entity <srl_fifo>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo2.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo2>.
+Parsing architecture <imp> of entity <srl_fifo2>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo3.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo3>.
+Parsing architecture <imp> of entity <srl_fifo3>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu>.
+Parsing architecture <imp> of entity <srl_fifo_rbu>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/valid_be.vhd" into library proc_common_v3_00_a
+Parsing entity <valid_be>.
+Parsing architecture <implementation> of entity <valid_be>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_with_enable_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_with_enable_f>.
+Parsing architecture <implementation> of entity <or_with_enable_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/muxf_struct_f.vhd" into library proc_common_v3_00_a
+Parsing entity <muxf_struct>.
+Parsing architecture <imp> of entity <muxf_struct>.
+Parsing entity <muxf_struct_f>.
+Parsing architecture <imp> of entity <muxf_struct_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/cntr_incr_decr_addn_f.vhd" into library proc_common_v3_00_a
+Parsing entity <cntr_incr_decr_addn_f>.
+Parsing architecture <imp> of entity <cntr_incr_decr_addn_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_f>.
+Parsing architecture <behavioral> of entity <dynshreg_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/dynshreg_i_f.vhd" into library proc_common_v3_00_a
+Parsing entity <dynshreg_i_f>.
+Parsing architecture <behavioral> of entity <dynshreg_i_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/mux_onehot_f.vhd" into library proc_common_v3_00_a
+Parsing entity <mux_onehot_f>.
+Parsing architecture <imp> of entity <mux_onehot_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_rbu_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_rbu_f>.
+Parsing architecture <imp> of entity <srl_fifo_rbu_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/srl_fifo_f.vhd" into library proc_common_v3_00_a
+Parsing entity <srl_fifo_f>.
+Parsing architecture <imp> of entity <srl_fifo_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/compare_vectors_f.vhd" into library proc_common_v3_00_a
+Parsing entity <compare_vectors_f>.
+Parsing architecture <imp> of entity <compare_vectors_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd" into library proc_common_v3_00_a
+Parsing entity <pselect_f>.
+Parsing architecture <imp> of entity <pselect_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/counter_f.vhd" into library proc_common_v3_00_a
+Parsing entity <counter_f>.
+Parsing architecture <imp> of entity <counter_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_muxcy_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_muxcy_f>.
+Parsing architecture <implementation> of entity <or_muxcy_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/or_gate_f.vhd" into library proc_common_v3_00_a
+Parsing entity <or_gate_f>.
+Parsing architecture <imp> of entity <or_gate_f>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd" into library proc_common_v3_00_a
+Parsing entity <soft_reset>.
+Parsing architecture <implementation> of entity <soft_reset>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <address_decoder>.
+Parsing architecture <IMP> of entity <address_decoder>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <slave_attachment>.
+Parsing architecture <imp> of entity <slave_attachment>.
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd" into library axi_lite_ipif_v1_01_a
+Parsing entity <axi_lite_ipif>.
+Parsing architecture <imp> of entity <axi_lite_ipif>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/user_logic.vhd" into library project11_reduced_v1_00_a
+Parsing entity <user_logic>.
+Parsing architecture <IMP> of entity <user_logic>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/project11_reduced.vhd" into library project11_reduced_v1_00_a
+Parsing entity <project11_reduced>.
+Parsing architecture <IMP> of entity <project11_reduced>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/bramout.vhd" into library project11_reduced_v1_00_a
+Parsing entity <bramout>.
+Parsing architecture <bramout_a> of entity <bramout>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/bramp.vhd" into library project11_reduced_v1_00_a
+Parsing entity <bramp>.
+Parsing architecture <bramp_a> of entity <bramp>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/bramq.vhd" into library project11_reduced_v1_00_a
+Parsing entity <bramq>.
+Parsing architecture <bramq_a> of entity <bramq>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/bramr.vhd" into library project11_reduced_v1_00_a
+Parsing entity <bramr>.
+Parsing architecture <bramr_a> of entity <bramr>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/add_pipe.vhd" into library project11_reduced_v1_00_a
+Parsing entity <add_pipe>.
+Parsing architecture <BHV> of entity <add_pipe>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/addr_gen.vhd" into library project11_reduced_v1_00_a
+Parsing entity <addr_gen>.
+Parsing architecture <Behavioral> of entity <addr_gen>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/comparator.vhd" into library project11_reduced_v1_00_a
+Parsing entity <comparator>.
+Parsing architecture <Behavioral> of entity <comparator>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/datapath.vhd" into library project11_reduced_v1_00_a
+Parsing entity <datapath>.
+Parsing architecture <Behavioral> of entity <datapath>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/div_pipe.vhd" into library project11_reduced_v1_00_a
+Parsing entity <div_pipe>.
+Parsing architecture <Behavioral> of entity <div_pipe>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/master_ctrl.vhd" into library project11_reduced_v1_00_a
+Parsing entity <master_ctrl>.
+Parsing architecture <Behavioral> of entity <master_ctrl>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/mult_pipe.vhd" into library project11_reduced_v1_00_a
+Parsing entity <mult_pipe>.
+Parsing architecture <BHV> of entity <mult_pipe>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/mux.vhd" into library project11_reduced_v1_00_a
+Parsing entity <mux>.
+Parsing architecture <Behavioral> of entity <mux>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/reg.vhd" into library project11_reduced_v1_00_a
+Parsing entity <reg>.
+Parsing architecture <BHV> of entity <reg>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/smart_buff.vhd" into library project11_reduced_v1_00_a
+Parsing entity <smart_buff>.
+Parsing architecture <Behavioral> of entity <smart_buff>.
+Parsing VHDL file "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/top_level.vhd" into library project11_reduced_v1_00_a
+Parsing entity <top_level>.
+Parsing architecture <Behavioral> of entity <top_level>.
+Parsing VHDL file "C:\try11\try11.srcs\sources_1\edk\project_11_mod\hdl\project_11_mod_project11_reduced_0_wrapper.vhd" into library work
+Parsing entity <project_11_mod_project11_reduced_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <project_11_mod_project11_reduced_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <project_11_mod_project11_reduced_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <project11_reduced> (architecture <IMP>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <axi_lite_ipif> (architecture <imp>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <slave_attachment> (architecture <imp>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <address_decoder> (architecture <IMP>) with generics from library <axi_lite_ipif_v1_01_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <pselect_f> (architecture <imp>) with generics from library <proc_common_v3_00_a>.
+INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" Line 417. Case statement is complete. others clause is never selected
+
+Elaborating entity <soft_reset> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
+
+Elaborating entity <user_logic> (architecture <IMP>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <top_level> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <master_ctrl> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <smart_buff> (architecture <Behavioral>) from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <datapath> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <mult_pipe> (architecture <BHV>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <reg> (architecture <BHV>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <add_pipe> (architecture <BHV>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <reg> (architecture <BHV>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <div_pipe> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <comparator> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <mux> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <reg> (architecture <BHV>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <addr_gen> (architecture <Behavioral>) with generics from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <bramr> (architecture <bramr_a>) from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <bramp> (architecture <bramp_a>) from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <bramq> (architecture <bramq_a>) from library <project11_reduced_v1_00_a>.
+
+Elaborating entity <bramout> (architecture <bramout_a>) from library <project11_reduced_v1_00_a>.
+WARNING:HDLCompiler:634 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/user_logic.vhd" Line 149: Net <slv_reg2[31]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <project_11_mod_project11_reduced_0_wrapper>.
+    Related source file is "C:\try11\try11.srcs\sources_1\edk\project_11_mod\hdl\project_11_mod_project11_reduced_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <project_11_mod_project11_reduced_0_wrapper> synthesized.
+
+Synthesizing Unit <project11_reduced>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/project11_reduced.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_BASEADDR = "01111010000000000000000000000000"
+        C_HIGHADDR = "01111010000000011111111111111111"
+        C_FAMILY = "zynq"
+        C_NUM_REG = 1
+        C_NUM_MEM = 1
+        C_SLV_AWIDTH = 32
+        C_SLV_DWIDTH = 32
+    Set property "MAX_FANOUT = 10000" for signal <S_AXI_ACLK>.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = 10000" for signal <S_AXI_ARESETN>.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+INFO:Xst:3210 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/project11_reduced.vhd" line 259: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/project11_reduced.vhd" line 259: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/project11_reduced.vhd" line 310: Output port <Reset2Bus_ToutSup> of the instance <SOFT_RESET_I> is unconnected or connected to loadless signal.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <project11_reduced> synthesized.
+
+Synthesizing Unit <axi_lite_ipif>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/axi_lite_ipif.vhd".
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001111010000000000000000100000000","0000000000000000000000000000000001111010000000000000000111111111","0000000000000000000000000000000001111010000000000000000000000000","0000000000000000000000000000000001111010000000000000000011111111")
+        C_ARD_NUM_CE_ARRAY = (1,20)
+        C_FAMILY = "zynq"
+    Summary:
+	no macro.
+Unit <axi_lite_ipif> synthesized.
+
+Synthesizing Unit <slave_attachment>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd".
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001111010000000000000000100000000","0000000000000000000000000000000001111010000000000000000111111111","0000000000000000000000000000000001111010000000000000000000000000","0000000000000000000000000000000001111010000000000000000011111111")
+        C_ARD_NUM_CE_ARRAY = (1,20)
+        C_IPIF_ABUS_WIDTH = 32
+        C_IPIF_DBUS_WIDTH = 32
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_USE_WSTRB = 0
+        C_DPHASE_TIMEOUT = 8
+        C_FAMILY = "zynq"
+WARNING:Xst:647 - Input <S_AXI_AWADDR<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_WSTRB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARADDR<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/slave_attachment.vhd" line 341: Output port <CS_for_gaps> of the instance <I_DECODER> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <state>.
+    Found 2-bit register for signal <s_axi_rresp_i>.
+    Found 32-bit register for signal <s_axi_rdata_i>.
+    Found 1-bit register for signal <s_axi_rvalid_i>.
+    Found 2-bit register for signal <s_axi_bresp_i>.
+    Found 1-bit register for signal <s_axi_bvalid_i>.
+    Found 4-bit register for signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
+    Found 1-bit register for signal <rst>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | S_AXI_ACLK (rising_edge)                       |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | sm_idle                                        |
+    | Power Up State     | sm_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <INCLUDE_DPHASE_TIMER.dpto_cnt[3]_GND_14_o_add_31_OUT> created at line 507.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <slave_attachment> synthesized.
+
+Synthesizing Unit <address_decoder>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/axi_lite_ipif_v1_01_a/hdl/vhdl/address_decoder.vhd".
+        C_BUS_AWIDTH = 9
+        C_S_AXI_MIN_SIZE = "00000000000000000000000111111111"
+        C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000001111010000000000000000100000000","0000000000000000000000000000000001111010000000000000000111111111","0000000000000000000000000000000001111010000000000000000000000000","0000000000000000000000000000000001111010000000000000000011111111")
+        C_ARD_NUM_CE_ARRAY = (1,20)
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <Bus_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <cs_out_i<1>>.
+    Found 1-bit register for signal <Bus_RNW_reg>.
+    Found 1-bit register for signal <ce_out_i<0>>.
+    Found 1-bit register for signal <ce_out_i<1>>.
+    Found 1-bit register for signal <ce_out_i<2>>.
+    Found 1-bit register for signal <ce_out_i<3>>.
+    Found 1-bit register for signal <ce_out_i<4>>.
+    Found 1-bit register for signal <ce_out_i<5>>.
+    Found 1-bit register for signal <ce_out_i<6>>.
+    Found 1-bit register for signal <ce_out_i<7>>.
+    Found 1-bit register for signal <ce_out_i<8>>.
+    Found 1-bit register for signal <ce_out_i<9>>.
+    Found 1-bit register for signal <ce_out_i<10>>.
+    Found 1-bit register for signal <ce_out_i<11>>.
+    Found 1-bit register for signal <ce_out_i<12>>.
+    Found 1-bit register for signal <ce_out_i<13>>.
+    Found 1-bit register for signal <ce_out_i<14>>.
+    Found 1-bit register for signal <ce_out_i<15>>.
+    Found 1-bit register for signal <ce_out_i<16>>.
+    Found 1-bit register for signal <ce_out_i<17>>.
+    Found 1-bit register for signal <ce_out_i<18>>.
+    Found 1-bit register for signal <ce_out_i<19>>.
+    Found 1-bit register for signal <ce_out_i<20>>.
+    Found 1-bit register for signal <cs_out_i<0>>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <address_decoder> synthesized.
+
+Synthesizing Unit <pselect_f_1>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 1
+        C_AW = 9
+        C_BAR = "100000000"
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <A<1:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_1> synthesized.
+
+Synthesizing Unit <pselect_f_2>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 1
+        C_AW = 9
+        C_BAR = "000000000"
+        C_FAMILY = "nofamily"
+WARNING:Xst:647 - Input <A<1:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_2> synthesized.
+
+Synthesizing Unit <pselect_f_3>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_3> synthesized.
+
+Synthesizing Unit <pselect_f_4>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_4> synthesized.
+
+Synthesizing Unit <pselect_f_5>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_5> synthesized.
+
+Synthesizing Unit <pselect_f_6>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_6> synthesized.
+
+Synthesizing Unit <pselect_f_7>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_7> synthesized.
+
+Synthesizing Unit <pselect_f_8>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_8> synthesized.
+
+Synthesizing Unit <pselect_f_9>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_9> synthesized.
+
+Synthesizing Unit <pselect_f_10>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "00111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_10> synthesized.
+
+Synthesizing Unit <pselect_f_11>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_11> synthesized.
+
+Synthesizing Unit <pselect_f_12>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_12> synthesized.
+
+Synthesizing Unit <pselect_f_13>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_13> synthesized.
+
+Synthesizing Unit <pselect_f_14>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_14> synthesized.
+
+Synthesizing Unit <pselect_f_15>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01100"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_15> synthesized.
+
+Synthesizing Unit <pselect_f_16>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01101"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_16> synthesized.
+
+Synthesizing Unit <pselect_f_17>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01110"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_17> synthesized.
+
+Synthesizing Unit <pselect_f_18>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "01111"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_18> synthesized.
+
+Synthesizing Unit <pselect_f_19>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10000"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_19> synthesized.
+
+Synthesizing Unit <pselect_f_20>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10001"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_20> synthesized.
+
+Synthesizing Unit <pselect_f_21>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10010"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_21> synthesized.
+
+Synthesizing Unit <pselect_f_22>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/pselect_f.vhd".
+        C_AB = 5
+        C_AW = 5
+        C_BAR = "10011"
+        C_FAMILY = "nofamily"
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <pselect_f_22> synthesized.
+
+Synthesizing Unit <soft_reset>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v3_00_a/hdl/vhdl/soft_reset.vhd".
+        C_SIPIF_DWIDTH = 32
+        C_RESET_WIDTH = 8
+WARNING:Xst:647 - Input <Bus2IP_Data<0:27>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_BE<0:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <reset_trig>.
+    Found 1-bit register for signal <sw_rst_cond_d1>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <soft_reset> synthesized.
+
+Synthesizing Unit <user_logic>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/user_logic.vhd".
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+        C_NUM_REG = 20
+        C_SLV_DWIDTH = 32
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:653 - Signal <slv_reg2<31:1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <slv_reg1>.
+    Found 32-bit register for signal <slv_reg3>.
+    Found 32-bit register for signal <slv_reg4>.
+    Found 32-bit register for signal <slv_reg5>.
+    Found 32-bit register for signal <slv_reg6>.
+    Found 32-bit register for signal <slv_reg7>.
+    Found 32-bit register for signal <slv_reg8>.
+    Found 32-bit register for signal <slv_reg10>.
+    Found 32-bit register for signal <slv_reg11>.
+    Found 32-bit register for signal <slv_reg12>.
+    Found 32-bit register for signal <slv_reg13>.
+    Found 32-bit register for signal <slv_reg14>.
+    Found 32-bit register for signal <slv_reg15>.
+    Found 32-bit register for signal <slv_reg16>.
+    Found 32-bit register for signal <slv_reg17>.
+    Found 32-bit register for signal <slv_reg18>.
+    Found 32-bit register for signal <slv_reg0>.
+    Summary:
+	inferred 544 D-type flip-flop(s).
+	inferred 545 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+Synthesizing Unit <top_level>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/top_level.vhd".
+        width = 8
+INFO:Xst:3210 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/top_level.vhd" line 223: Output port <valid_out> of the instance <PATH2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/top_level.vhd" line 239: Output port <valid_out> of the instance <PATH3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/top_level.vhd" line 255: Output port <valid_out> of the instance <PATH4> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top_level> synthesized.
+
+Synthesizing Unit <master_ctrl>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/master_ctrl.vhd".
+        width = 8
+    Found 8-bit register for signal <count1>.
+    Found 8-bit register for signal <count2>.
+    Found 21-bit register for signal <pixel>.
+    Found 32-bit register for signal <timing_count>.
+    Found 32-bit register for signal <timingCount>.
+    Found 3-bit register for signal <state>.
+    Found 8-bit adder for signal <count1[7]_GND_42_o_add_6_OUT> created at line 1241.
+    Found 21-bit adder for signal <pixel[20]_GND_42_o_add_11_OUT> created at line 1241.
+    Found 8-bit adder for signal <count2[7]_GND_42_o_add_18_OUT> created at line 1241.
+    Found 32-bit adder for signal <timing_count[31]_GND_42_o_add_19_OUT> created at line 1241.
+    Found 11x11-bit multiplier for signal <max_pixel> created at line 57.
+    Found 4x1-bit Read Only RAM for signal <valid_in>
+    Found 4x1-bit Read Only RAM for signal <done>
+    Found 8x4-bit Read Only RAM for signal <_n0184>
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <nextstate<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator lessequal for signal <n0005> created at line 79
+    Found 22-bit comparator greater for signal <max_pixel[21]_GND_42_o_LessThan_11_o> created at line 85
+    Found 8-bit comparator greater for signal <GND_42_o_count2[7]_LessThan_18_o> created at line 92
+    Summary:
+	inferred   3 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 104 D-type flip-flop(s).
+	inferred   3 Latch(s).
+	inferred   3 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <master_ctrl> synthesized.
+
+Synthesizing Unit <smart_buff>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/smart_buff.vhd".
+    Found 64-bit register for signal <tmp>.
+    Found 32-bit register for signal <tmpNEW>.
+    Found 32-bit register for signal <tmpOLD>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <smart_buff> synthesized.
+
+Synthesizing Unit <datapath>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/datapath.vhd".
+        width = 8
+    Summary:
+	no macro.
+Unit <datapath> synthesized.
+
+Synthesizing Unit <mult_pipe>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/mult_pipe.vhd".
+        width = 8
+    Found 16-bit register for signal <output>.
+    Found 9x9-bit multiplier for signal <mult_temp> created at line 34.
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred  16 D-type flip-flop(s).
+Unit <mult_pipe> synthesized.
+
+Synthesizing Unit <reg_1>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/reg.vhd".
+        width = 1
+    Found 1-bit register for signal <output>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <reg_1> synthesized.
+
+Synthesizing Unit <add_pipe>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/add_pipe.vhd".
+        width = 16
+    Found 16-bit register for signal <output>.
+    Found 16-bit adder for signal <temp_add> created at line 61.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <add_pipe> synthesized.
+
+Synthesizing Unit <reg_2>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/reg.vhd".
+        width = 16
+    Found 16-bit register for signal <output>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <reg_2> synthesized.
+
+Synthesizing Unit <div_pipe>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/div_pipe.vhd".
+        width = 16
+    Found 16-bit register for signal <result>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <div_pipe> synthesized.
+
+Synthesizing Unit <div_16s_16s>.
+    Related source file is "".
+    Found 16-bit subtractor for signal <a[15]_unary_minus_1_OUT> created at line 0.
+    Found 16-bit subtractor for signal <b[15]_unary_minus_3_OUT> created at line 0.
+    Found 32-bit adder for signal <n1002> created at line 0.
+    Found 32-bit adder for signal <GND_81_o_b[15]_add_5_OUT> created at line 0.
+    Found 31-bit adder for signal <n1006> created at line 0.
+    Found 31-bit adder for signal <GND_81_o_b[15]_add_7_OUT> created at line 0.
+    Found 30-bit adder for signal <n1010> created at line 0.
+    Found 30-bit adder for signal <GND_81_o_b[15]_add_9_OUT> created at line 0.
+    Found 29-bit adder for signal <n1014> created at line 0.
+    Found 29-bit adder for signal <GND_81_o_b[15]_add_11_OUT> created at line 0.
+    Found 28-bit adder for signal <n1018> created at line 0.
+    Found 28-bit adder for signal <GND_81_o_b[15]_add_13_OUT> created at line 0.
+    Found 27-bit adder for signal <n1022> created at line 0.
+    Found 27-bit adder for signal <GND_81_o_b[15]_add_15_OUT> created at line 0.
+    Found 26-bit adder for signal <n1026> created at line 0.
+    Found 26-bit adder for signal <GND_81_o_b[15]_add_17_OUT> created at line 0.
+    Found 25-bit adder for signal <n1030> created at line 0.
+    Found 25-bit adder for signal <GND_81_o_b[15]_add_19_OUT> created at line 0.
+    Found 24-bit adder for signal <n1034> created at line 0.
+    Found 24-bit adder for signal <GND_81_o_b[15]_add_21_OUT> created at line 0.
+    Found 23-bit adder for signal <n1038> created at line 0.
+    Found 23-bit adder for signal <GND_81_o_b[15]_add_23_OUT> created at line 0.
+    Found 22-bit adder for signal <n1042> created at line 0.
+    Found 22-bit adder for signal <GND_81_o_b[15]_add_25_OUT> created at line 0.
+    Found 21-bit adder for signal <n1046> created at line 0.
+    Found 21-bit adder for signal <GND_81_o_b[15]_add_27_OUT> created at line 0.
+    Found 20-bit adder for signal <n1050> created at line 0.
+    Found 20-bit adder for signal <GND_81_o_b[15]_add_29_OUT> created at line 0.
+    Found 19-bit adder for signal <n1054> created at line 0.
+    Found 19-bit adder for signal <GND_81_o_b[15]_add_31_OUT> created at line 0.
+    Found 18-bit adder for signal <n1058> created at line 0.
+    Found 18-bit adder for signal <GND_81_o_b[15]_add_33_OUT> created at line 0.
+    Found 17-bit adder for signal <n1062> created at line 0.
+    Found 17-bit adder for signal <GND_81_o_b[15]_add_35_OUT> created at line 0.
+    Found 17-bit adder for signal <GND_81_o_BUS_0001_add_38_OUT[16:0]> created at line 0.
+    Found 32-bit comparator greater for signal <BUS_0001_INV_521_o> created at line 0
+    Found 31-bit comparator greater for signal <BUS_0002_INV_520_o> created at line 0
+    Found 30-bit comparator greater for signal <BUS_0003_INV_519_o> created at line 0
+    Found 29-bit comparator greater for signal <BUS_0004_INV_518_o> created at line 0
+    Found 28-bit comparator greater for signal <BUS_0005_INV_517_o> created at line 0
+    Found 27-bit comparator greater for signal <BUS_0006_INV_516_o> created at line 0
+    Found 26-bit comparator greater for signal <BUS_0007_INV_515_o> created at line 0
+    Found 25-bit comparator greater for signal <BUS_0008_INV_514_o> created at line 0
+    Found 24-bit comparator greater for signal <BUS_0009_INV_513_o> created at line 0
+    Found 23-bit comparator greater for signal <BUS_0010_INV_512_o> created at line 0
+    Found 22-bit comparator greater for signal <BUS_0011_INV_511_o> created at line 0
+    Found 21-bit comparator greater for signal <BUS_0012_INV_510_o> created at line 0
+    Found 20-bit comparator greater for signal <BUS_0013_INV_509_o> created at line 0
+    Found 19-bit comparator greater for signal <BUS_0014_INV_508_o> created at line 0
+    Found 18-bit comparator greater for signal <BUS_0015_INV_507_o> created at line 0
+    Found 17-bit comparator greater for signal <BUS_0016_INV_506_o> created at line 0
+    Found 16-bit comparator greater for signal <BUS_0017_INV_505_o> created at line 0
+    Summary:
+	inferred  35 Adder/Subtractor(s).
+	inferred  17 Comparator(s).
+	inferred 244 Multiplexer(s).
+Unit <div_16s_16s> synthesized.
+
+Synthesizing Unit <comparator>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/comparator.vhd".
+        width = 16
+    Found 16-bit comparator lessequal for signal <n0001> created at line 47
+    Summary:
+	inferred   1 Comparator(s).
+Unit <comparator> synthesized.
+
+Synthesizing Unit <mux>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/mux.vhd".
+        width = 8
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux> synthesized.
+
+Synthesizing Unit <reg_3>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/reg.vhd".
+        width = 8
+    Found 8-bit register for signal <output>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <reg_3> synthesized.
+
+Synthesizing Unit <addr_gen>.
+    Related source file is "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/hdl/vhdl/addr_gen.vhd".
+        width = 14
+    Found 14-bit register for signal <count>.
+    Found 14-bit adder for signal <count[13]_GND_111_o_add_0_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+Unit <addr_gen> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 4x1-bit single-port Read Only RAM                     : 2
+ 8x4-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 37
+ 11x11-bit multiplier                                  : 1
+ 9x9-bit multiplier                                    : 36
+# Adders/Subtractors                                   : 179
+ 14-bit adder                                          : 2
+ 16-bit adder                                          : 32
+ 16-bit subtractor                                     : 8
+ 17-bit adder                                          : 12
+ 18-bit adder                                          : 8
+ 19-bit adder                                          : 8
+ 20-bit adder                                          : 8
+ 21-bit adder                                          : 9
+ 22-bit adder                                          : 8
+ 23-bit adder                                          : 8
+ 24-bit adder                                          : 8
+ 25-bit adder                                          : 8
+ 26-bit adder                                          : 8
+ 27-bit adder                                          : 8
+ 28-bit adder                                          : 8
+ 29-bit adder                                          : 8
+ 30-bit adder                                          : 8
+ 31-bit adder                                          : 8
+ 32-bit adder                                          : 9
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 2
+# Registers                                            : 179
+ 1-bit register                                        : 55
+ 14-bit register                                       : 2
+ 16-bit register                                       : 84
+ 2-bit register                                        : 3
+ 21-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 20
+ 4-bit register                                        : 1
+ 64-bit register                                       : 6
+ 8-bit register                                        : 6
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Comparators                                          : 75
+ 16-bit comparator greater                             : 4
+ 16-bit comparator lessequal                           : 4
+ 17-bit comparator greater                             : 4
+ 18-bit comparator greater                             : 4
+ 19-bit comparator greater                             : 4
+ 20-bit comparator greater                             : 4
+ 21-bit comparator greater                             : 4
+ 22-bit comparator greater                             : 5
+ 23-bit comparator greater                             : 4
+ 24-bit comparator greater                             : 4
+ 25-bit comparator greater                             : 4
+ 26-bit comparator greater                             : 4
+ 27-bit comparator greater                             : 4
+ 28-bit comparator greater                             : 4
+ 29-bit comparator greater                             : 4
+ 30-bit comparator greater                             : 4
+ 31-bit comparator greater                             : 4
+ 32-bit comparator greater                             : 4
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1562
+ 1-bit 2-to-1 multiplexer                              : 1531
+ 16-bit 2-to-1 multiplexer                             : 12
+ 17-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <addr_gen>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <addr_gen> synthesized (advanced).
+
+Synthesizing (advanced) Unit <master_ctrl>.
+The following registers are absorbed into counter <count1>: 1 register on signal <count1>.
+The following registers are absorbed into counter <count2>: 1 register on signal <count2>.
+The following registers are absorbed into accumulator <pixel>: 1 register on signal <pixel>.
+The following registers are absorbed into counter <timing_count>: 1 register on signal <timing_count>.
+INFO:Xst:3217 - HDL ADVISOR - Register <output_0> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_valid_in> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<1:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <valid_in>      |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0184> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_done> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(state<2>,state<0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <done>          |          |
+    -----------------------------------------------------------------------
+Unit <master_ctrl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <slave_attachment>.
+The following registers are absorbed into counter <INCLUDE_DPHASE_TIMER.dpto_cnt>: 1 register on signal <INCLUDE_DPHASE_TIMER.dpto_cnt>.
+Unit <slave_attachment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 4x1-bit single-port distributed Read Only RAM         : 2
+ 8x4-bit single-port distributed Read Only RAM         : 1
+# Multipliers                                          : 37
+ 9x10-bit multiplier                                   : 1
+ 9x8-bit multiplier                                    : 36
+# Adders/Subtractors                                   : 108
+ 16-bit adder                                          : 32
+ 16-bit adder carry in                                 : 64
+ 16-bit subtractor                                     : 8
+ 17-bit adder                                          : 4
+# Counters                                             : 6
+ 14-bit up counter                                     : 2
+ 32-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 21-bit up accumulator                                 : 1
+# Registers                                            : 2441
+ Flip-Flops                                            : 2441
+# Comparators                                          : 75
+ 16-bit comparator greater                             : 4
+ 16-bit comparator lessequal                           : 4
+ 17-bit comparator greater                             : 4
+ 18-bit comparator greater                             : 4
+ 19-bit comparator greater                             : 4
+ 20-bit comparator greater                             : 4
+ 21-bit comparator greater                             : 4
+ 22-bit comparator greater                             : 5
+ 23-bit comparator greater                             : 4
+ 24-bit comparator greater                             : 4
+ 25-bit comparator greater                             : 4
+ 26-bit comparator greater                             : 4
+ 27-bit comparator greater                             : 4
+ 28-bit comparator greater                             : 4
+ 29-bit comparator greater                             : 4
+ 30-bit comparator greater                             : 4
+ 31-bit comparator greater                             : 4
+ 32-bit comparator greater                             : 4
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 1540
+ 1-bit 2-to-1 multiplexer                              : 1509
+ 16-bit 2-to-1 multiplexer                             : 12
+ 17-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <s_axi_bresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ce_out_i_0> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <cs_out_i_0> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <state[1:2]> with user encoding.
+----------------------
+ State    | Encoding
+----------------------
+ sm_idle  | 00
+ sm_read  | 01
+ sm_write | 10
+ sm_resp  | 11
+----------------------
+WARNING:Xst:1293 - FF/Latch <pixel_0> has a constant value of 0 in block <master_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <pixel_1> has a constant value of 0 in block <master_ctrl>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_8> of sequential type is unconnected in block <datapath>.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_9> of sequential type is unconnected in block <datapath>.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_10> of sequential type is unconnected in block <datapath>.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_11> of sequential type is unconnected in block <datapath>.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_12> of sequential type is unconnected in block <datapath>.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_13> of sequential type is unconnected in block <datapath>.
+WARNING:Xst:2677 - Node <DIVIDE_ALL/result_14> of sequential type is unconnected in block <datapath>.
+
+Optimizing unit <project_11_mod_project11_reduced_0_wrapper> ...
+
+Optimizing unit <top_level> ...
+
+Optimizing unit <mult_pipe> ...
+
+Optimizing unit <reg_2> ...
+
+Optimizing unit <reg_3> ...
+
+Optimizing unit <project11_reduced> ...
+
+Optimizing unit <slave_attachment> ...
+
+Optimizing unit <address_decoder> ...
+
+Optimizing unit <soft_reset> ...
+
+Optimizing unit <user_logic> ...
+
+Optimizing unit <master_ctrl> ...
+
+Optimizing unit <smart_buff> ...
+
+Optimizing unit <datapath> ...
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_63> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_62> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_61> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_60> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_59> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_58> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_57> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_56> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_55> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_54> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_53> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_52> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_51> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_50> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_49> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmp_48> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_63> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_62> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_61> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_60> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_59> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_58> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_57> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_56> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_55> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_54> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_53> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_52> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_51> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_50> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_49> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmp_48> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_63> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_62> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_61> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_60> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_59> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_58> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_57> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_56> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_55> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_54> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_53> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_52> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_51> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_50> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_49> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmp_48> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID1/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID2/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID3/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID4/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID5/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID6/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/VALID7/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID1/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID2/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID3/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID4/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID5/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID6/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/VALID7/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID1/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID2/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID3/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID4/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID5/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID6/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:2677 - Node <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/VALID7/output_0> of sequential type is unconnected in block <project_11_mod_project11_reduced_0_wrapper>.
+WARNING:Xst:1293 - FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/pixel_20> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/pixel_19> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/pixel_18> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/pixel_17> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/pixel_16> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count1_7> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count1_6> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count1_5> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count1_4> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count1_3> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count1_2> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count2_7> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count2_6> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count2_5> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <project11_reduced_0/USER_LOGIC_I/TOP/MASTER/count2_4> has a constant value of 0 in block <project_11_mod_project11_reduced_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block project_11_mod_project11_reduced_0_wrapper, actual ratio is 8.
+FlipFlop project11_reduced_0/USER_LOGIC_I/TOP/PATH1/ADD_ALL/output_15 has been replicated 1 time(s)
+FlipFlop project11_reduced_0/USER_LOGIC_I/TOP/PATH2/ADD_ALL/output_15 has been replicated 2 time(s)
+FlipFlop project11_reduced_0/USER_LOGIC_I/TOP/PATH3/ADD_ALL/output_15 has been replicated 2 time(s)
+FlipFlop project11_reduced_0/USER_LOGIC_I/TOP/PATH4/ADD_ALL/output_15 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <project_11_mod_project11_reduced_0_wrapper> :
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_31>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_30>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_29>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_28>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_27>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_26>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_25>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_24>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_23>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_22>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_21>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_20>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_19>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_18>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_17>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/Q_BUFF/tmpOLD_16>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_31>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_30>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_29>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_28>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_27>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_26>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_25>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_24>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_23>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_22>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_21>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_20>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_19>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_18>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_17>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/P_BUFF/tmpOLD_16>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_31>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_30>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_29>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_28>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_27>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_26>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_25>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_24>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_23>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_22>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_21>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_20>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_19>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_18>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_17>.
+	Found 2-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/R_BUFF/tmpOLD_16>.
+	Found 6-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/VALID7/output_0>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_15>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_14>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_13>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_12>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_11>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_10>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_9>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_8>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_7>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_6>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_5>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_4>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_3>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_2>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_1>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH1/REG3_Q3/output_0>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_15>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_14>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_13>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_12>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_11>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_10>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_9>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_8>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_7>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_6>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_5>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_4>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_3>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_2>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_1>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH2/REG3_Q3/output_0>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_15>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_14>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_13>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_12>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_11>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_10>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_9>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_8>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_7>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_6>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_5>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_4>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_3>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_2>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_1>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH3/REG3_Q3/output_0>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_15>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_14>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_13>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_12>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_11>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_10>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_9>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_8>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_7>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_6>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_5>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_4>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_3>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_2>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_1>.
+	Found 4-bit shift register for signal <project11_reduced_0/USER_LOGIC_I/TOP/PATH4/REG3_Q3/output_0>.
+Unit <project_11_mod_project11_reduced_0_wrapper> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2076
+ Flip-Flops                                            : 2076
+# Shift Registers                                      : 113
+ 2-bit shift register                                  : 48
+ 4-bit shift register                                  : 64
+ 6-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project_11_mod_project11_reduced_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5406
+#      GND                         : 1
+#      INV                         : 73
+#      LUT1                        : 76
+#      LUT2                        : 704
+#      LUT3                        : 190
+#      LUT4                        : 130
+#      LUT5                        : 350
+#      LUT6                        : 1693
+#      MUXCY                       : 1055
+#      MUXF7                       : 21
+#      VCC                         : 1
+#      XORCY                       : 1112
+# FlipFlops/Latches                : 2214
+#      FD                          : 4
+#      FDC                         : 35
+#      FDCE                        : 1394
+#      FDE                         : 161
+#      FDR                         : 18
+#      FDRE                        : 599
+#      LD                          : 3
+# Shift Registers                  : 113
+#      SRLC16E                     : 113
+# DSPs                             : 36
+#      DSP48E1                     : 36
+# Others                           : 4
+#      bramout                     : 1
+#      bramp                       : 1
+#      bramq                       : 1
+#      bramr                       : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2214  out of  106400     2%  
+ Number of Slice LUTs:                 3329  out of  53200     6%  
+    Number used as Logic:              3216  out of  53200     6%  
+    Number used as Memory:              113  out of  17400     0%  
+       Number used as SRL:              113
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4675
+   Number with an unused Flip Flop:    2461  out of   4675    52%  
+   Number with an unused LUT:          1346  out of   4675    28%  
+   Number of fully used LUT-FF pairs:   868  out of   4675    18%  
+   Number of unique control sets:        34
+
+IO Utilization: 
+ Number of IOs:                         148
+ Number of bonded IOBs:                   0  out of    200     0%  
+
+Specific Feature Utilization:
+ Number of DSP48E1s:                     36  out of    220    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                           | Clock buffer(FF name)                                                      | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+-------+
+S_AXI_ACLK                                                                                                                                             | NONE(project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1)| 2324  |
+project11_reduced_0/USER_LOGIC_I/TOP/MASTER/state[2]_PWR_52_o_Mux_52_o(project11_reduced_0/USER_LOGIC_I/TOP/MASTER/Mmux_state[2]_PWR_52_o_Mux_52_o11:O)| NONE(*)(project11_reduced_0/USER_LOGIC_I/TOP/MASTER/nextstate_1)           | 3     |
+-------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 19.676ns (Maximum Frequency: 50.824MHz)
+   Minimum input arrival time before clock: 2.797ns
+   Maximum output required time after clock: 3.077ns
+   Maximum combinational path delay: 1.235ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
+  Clock period: 19.676ns (frequency: 50.824MHz)
+  Total number of paths / destination ports: 73756905586932080 / 5986
+-------------------------------------------------------------------------
+Delay:               19.676ns (Levels of Logic = 61)
+  Source:            project11_reduced_0/USER_LOGIC_I/TOP/PATH1/ADD_ALL/output_0 (FF)
+  Destination:       project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/result_15 (FF)
+  Source Clock:      S_AXI_ACLK rising
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: project11_reduced_0/USER_LOGIC_I/TOP/PATH1/ADD_ALL/output_0 to project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/result_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.282   0.405  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/ADD_ALL/output_0 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/ADD_ALL/output_0)
+     INV:I->O              1   0.067   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_lut<0>_INV_0 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<0> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<1> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<2> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<3> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<4> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<5> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<6> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<7> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<8> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<9> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<10> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<11> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<12> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<13> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_cy<13>)
+     XORCY:CI->O          13   0.320   0.805  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Msub_a[15]_unary_minus_1_OUT_xor<14> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_unary_minus_1_OUT<14>)
+     LUT5:I0->O            1   0.053   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0006_INV_516_o1_SW0_G (N4439)
+     MUXF7:I1->O           2   0.217   0.419  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0006_INV_516_o1_SW0 (N309)
+     LUT6:I5->O           20   0.053   0.524  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_611_o121 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_17_OUT_Madd_Madd_lut<13>)
+     MUXCY:DI->O           1   0.278   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_17_OUT_Madd_Madd_cy<13> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_17_OUT_Madd_Madd_cy<13>)
+     XORCY:CI->O          12   0.320   0.485  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_17_OUT_Madd_Madd_xor<14> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_b[15]_add_17_OUT<14>)
+     LUT6:I5->O           34   0.053   0.755  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0008_INV_514_o2 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0008_INV_514_o1)
+     LUT6:I3->O           10   0.053   0.458  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_713_o141 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_21_OUT_Madd_Madd_lut<11>)
+     MUXCY:DI->O           1   0.278   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_21_OUT_Madd_Madd_cy<11> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_21_OUT_Madd_Madd_cy<11>)
+     XORCY:CI->O          14   0.320   0.498  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_21_OUT_Madd_Madd_xor<12> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_b[15]_add_21_OUT<12>)
+     LUT6:I5->O            9   0.053   0.452  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_761_o131 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_GND_81_o_MUX_764_o)
+     MUXCY:DI->O           1   0.278   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_23_OUT_Madd_Madd_cy<12> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_23_OUT_Madd_Madd_cy<12>)
+     XORCY:CI->O          14   0.320   0.498  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_23_OUT_Madd_Madd_xor<13> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_b[15]_add_23_OUT<13>)
+     LUT5:I4->O           24   0.053   0.545  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_807_o121 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_GND_81_o_MUX_809_o)
+     MUXCY:DI->O           1   0.278   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_25_OUT_Madd_Madd_cy<13> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_25_OUT_Madd_Madd_cy<13>)
+     XORCY:CI->O          12   0.320   0.485  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_25_OUT_Madd_Madd_xor<14> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_b[15]_add_25_OUT<14>)
+     LUT6:I5->O           16   0.053   0.700  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_829_o111 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_GND_81_o_MUX_830_o)
+     LUT6:I3->O            5   0.053   0.662  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_871_o191 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_GND_81_o_MUX_880_o)
+     LUT6:I2->O           24   0.053   0.748  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0013_INV_509_o11 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0013_INV_509_o1)
+     LUT6:I3->O            1   0.053   0.635  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_911_o191 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_31_OUT_Madd_Madd_lut<6>)
+     LUT6:I2->O           28   0.053   0.565  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0014_INV_508_o11 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0014_INV_508_o1)
+     LUT6:I5->O           12   0.053   0.485  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0014_INV_508_o13 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0014_INV_508_o2)
+     LUT6:I5->O            4   0.053   0.419  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_949_o1111 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_GND_81_o_MUX_960_o)
+     MUXCY:DI->O           1   0.278   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_33_OUT_Madd_Madd_cy<4> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_33_OUT_Madd_Madd_cy<4>)
+     XORCY:CI->O           4   0.320   0.433  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_33_OUT_Madd_Madd_xor<5> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_b[15]_add_33_OUT<5>)
+     LUT6:I5->O            1   0.053   0.399  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_a[15]_GND_81_o_MUX_1000_o1111 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/a[15]_GND_81_o_MUX_995_o)
+     MUXCY:DI->O           1   0.278   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_35_OUT_Madd_Madd_cy<5> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_35_OUT_Madd_Madd_cy<5>)
+     XORCY:CI->O           1   0.320   0.602  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_b[15]_add_35_OUT_Madd_Madd_xor<6> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_b[15]_add_35_OUT<6>)
+     LUT6:I3->O            2   0.053   0.608  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0017_INV_505_o25 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/BUS_0017_INV_505_o24)
+     LUT5:I2->O            1   0.053   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_lut<0> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<0> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<1> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<2> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<3> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<4> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<5> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<6> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<7> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<8> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<9> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<10> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<11> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<12> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<12>)
+     MUXCY:CI->O           0   0.015   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<13> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_cy<13>)
+     XORCY:CI->O           1   0.320   0.413  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Madd_GND_81_o_BUS_0001_add_38_OUT[16:0]_xor<14> (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/GND_81_o_BUS_0001_add_38_OUT[16:0]<14>)
+     LUT2:I1->O            1   0.053   0.000  project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/num_signed[15]_denom_signed[15]_div_2/Mmux_o71 (project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/n0009<15>)
+     FDCE:D                    0.011          project11_reduced_0/USER_LOGIC_I/TOP/PATH1/DIVIDE_ALL/result_15
+    ----------------------------------------
+    Total                     19.676ns (6.678ns logic, 12.998ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 1873 / 1301
+-------------------------------------------------------------------------
+Offset:              2.797ns (Levels of Logic = 4)
+  Source:            S_AXI_WDATA<3> (PAD)
+  Destination:       project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_20 (FF)
+  Destination Clock: S_AXI_ACLK rising
+
+  Data Path: S_AXI_WDATA<3> to project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I2->O            3   0.053   0.427  project11_reduced_0/SOFT_RESET_I/reset_error1 (project11_reduced_0/ipif_IP2Bus_Error)
+     LUT6:I5->O            1   0.053   0.413  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done5 (project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done4)
+     LUT4:I3->O            3   0.053   0.649  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6 (S_AXI_AWREADY)
+     LUT4:I0->O           22   0.053   0.535  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr1 (project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr)
+     FDRE:R                    0.325          project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
+    ----------------------------------------
+    Total                      2.797ns (0.773ns logic, 2.024ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
+  Total number of paths / destination ports: 279 / 147
+-------------------------------------------------------------------------
+Offset:              3.077ns (Levels of Logic = 4)
+  Source:            project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
+  Destination:       S_AXI_ARREADY (PAD)
+  Source Clock:      S_AXI_ACLK rising
+
+  Data Path: project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to S_AXI_ARREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              84   0.282   0.577  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
+     LUT2:I1->O            5   0.053   0.766  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<16>1 (project11_reduced_0/ipif_Bus2IP_RdCE<4>)
+     LUT6:I0->O            1   0.053   0.602  project11_reduced_0/USER_LOGIC_I/slv_read_ack<0>3 (project11_reduced_0/USER_LOGIC_I/slv_read_ack<0>2)
+     LUT6:I3->O           36   0.053   0.638  project11_reduced_0/USER_LOGIC_I/slv_read_ack<0>4 (project11_reduced_0/user_IP2Bus_RdAck)
+     LUT2:I0->O            0   0.053   0.000  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1 (S_AXI_ARREADY)
+    ----------------------------------------
+    Total                      3.077ns (0.494ns logic, 2.583ns route)
+                                       (16.1% logic, 83.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 13 / 7
+-------------------------------------------------------------------------
+Delay:               1.235ns (Levels of Logic = 3)
+  Source:            S_AXI_WDATA<3> (PAD)
+  Destination:       S_AXI_WREADY (PAD)
+
+  Data Path: S_AXI_WDATA<3> to S_AXI_WREADY
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I2->O            3   0.053   0.427  project11_reduced_0/SOFT_RESET_I/reset_error1 (project11_reduced_0/ipif_IP2Bus_Error)
+     LUT6:I5->O            1   0.053   0.413  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done5 (project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done4)
+     LUT4:I3->O            3   0.053   0.000  project11_reduced_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6 (S_AXI_AWREADY)
+    ----------------------------------------
+    Total                      1.235ns (0.395ns logic, 0.840ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock S_AXI_ACLK
+----------------------------------------------------------------------+---------+---------+---------+---------+
+                                                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------------------------------------------+---------+---------+---------+---------+
+S_AXI_ACLK                                                            |   19.676|         |         |         |
+project11_reduced_0/USER_LOGIC_I/TOP/MASTER/state[2]_PWR_52_o_Mux_52_o|         |    1.658|         |         |
+----------------------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock project11_reduced_0/USER_LOGIC_I/TOP/MASTER/state[2]_PWR_52_o_Mux_52_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+S_AXI_ACLK     |         |         |    1.049|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 92.00 secs
+Total CPU time to Xst completion: 91.98 secs
+ 
+--> 
+
+Total memory usage is 542360 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  116 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/devl/projnav/project11_reduced.xst" -ofn "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/devl/projnav/project11_reduced.syr" 
+xst -intstyle ise -ifn "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/devl/projnav/project11_reduced.xst" -ofn "C:/try11/try11.srcs/sources_1/edk/project_11_mod/pcores/project11_reduced_v1_00_a/devl/projnav/project11_reduced.syr" 

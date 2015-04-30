@@ -1,0 +1,16 @@
+13:46:42.629 INFO  - Processing command line option -hwspec C:/try11/try11.sdk/SDK/SDK_Export/hw/project_11_mod.xml. 
+14:03:35.516 INFO  - Successfully generated C:\try11\try11.sdk\SDK\SDK_Export\try11\src\lscript.ld. 
+14:03:35.518 INFO  - Applying linker script to all configurations of project try11. 
+14:03:35.519 INFO  - Setting rebuild state to true for all configurations of project try11. 
+14:07:03.372 INFO  - Processing command line option -hwspec C:/try11/try11.sdk/SDK/SDK_Export/hw/project_11_mod.xml. 
+14:07:42.993 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:13:07.569 INFO  - Processing command line option -hwspec C:/try11/try11.sdk/SDK/SDK_Export/hw/project_11_mod.xml. 
+14:13:33.942 INFO  - FPGA configured successfully with bitstream "C:/try11/try11.sdk/SDK/SDK_Export/project_11_mod_hw_platform/system.bit" 
+14:13:52.447 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:13:52.634 INFO  - PS initialization will be done as it is not done before. 
+14:13:52.634 INFO  - Running PS initialization.... 
+14:14:11.829 INFO  - ps7_init is completed. 
+14:14:12.437 INFO  - ps7_post_config is completed. 
+14:14:12.734 INFO  - PS Initialization is complete. 
+14:21:54.253 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:41:48.724 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

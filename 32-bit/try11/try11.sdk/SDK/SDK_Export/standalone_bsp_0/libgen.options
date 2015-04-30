@@ -1,0 +1,3 @@
+PROCESSOR=ps7_cortexa9_0
+REPOSITORIES=
+HWSPEC=../project_11_mod_hw_platform/system.xml
