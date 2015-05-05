@@ -1,0 +1,14 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Apr 23 15:08:49 2015
+
+drc -z project12_mod_stub_routed.ncd project12_mod_stub.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   project12_mod_i/project12_reduced_0/project12_reduced_0/USER_LOGIC_I/TOP/MAST
+   ER/state[2]_PWR_52_o_Mux_52_o is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

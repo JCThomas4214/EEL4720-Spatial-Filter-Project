@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=C:\try12\try12.runs\impl_1\project12_mod_stub_routed.ncd
+OUTFILE=C:\try12\try12.runs\impl_1\project12_mod_stub.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=C:\try12\try12.runs\impl_1
+LICENSE=WebPack
+USER_INFO=210991259_0_0_952

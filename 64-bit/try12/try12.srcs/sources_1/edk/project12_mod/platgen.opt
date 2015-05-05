@@ -1,0 +1,13 @@
+-p
+xc7z020clg484-1
+-lang
+vhdl
+-intstyle
+pa
+-toplevel
+no
+-ti
+project12_mod_i
+-msg
+__xps/ise/xmsgprops.lst
+project12_mod.mhs

@@ -1,0 +1,2379 @@
+15:14:14 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../project12_mod_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../project12_mod_hw_platform/system.xml -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling standalone"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+15:15:24 **** Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1096	  29780	  53748	   d1f4	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:17:08 **** Auto Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:17:12 **** Clean-only build of configuration Debug for project try12 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  try12.elf.size  try12.elf
+' '
+15:17:12 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1096	  29780	  53748	   d1f4	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:17:32 **** Auto Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:17:49 **** Auto Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:17:56 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:3:31: fatal error: PROJECT11_REDUCED.h: No such file or directory
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:18:04 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:5: warning: implicit declaration of function 'PROJECT11_REDUCED_mWriteSlaveReg0' [-Wimplicit-function-declaration]
+../src/helloworld.c:108:5: warning: implicit declaration of function 'PROJECT11_REDUCED_mWriteSlaveReg1' [-Wimplicit-function-declaration]
+../src/helloworld.c:123:5: warning: implicit declaration of function 'PROJECT11_REDUCED_mWriteSlaveReg7' [-Wimplicit-function-declaration]
+../src/helloworld.c:128:8: warning: implicit declaration of function 'PROJECT11_REDUCED_mWriteSlaveReg6' [-Wimplicit-function-declaration]
+../src/helloworld.c:129:8: warning: implicit declaration of function 'PROJECT11_REDUCED_mReadSlaveReg9' [-Wimplicit-function-declaration]
+../src/helloworld.c:140:5: warning: implicit declaration of function 'PROJECT11_REDUCED_mReadSlaveReg19' [-Wimplicit-function-declaration]
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:73: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg0'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:76: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg0'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:108: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg1'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:112: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg1'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:123: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg7'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:128: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg6'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:129: undefined reference to `PROJECT11_REDUCED_mReadSlaveReg9'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:133: undefined reference to `PROJECT11_REDUCED_mWriteSlaveReg6'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:134: undefined reference to `PROJECT11_REDUCED_mReadSlaveReg9'
+C:\try12\try12.sdk\SDK\SDK_Export\try12\Debug/../src/helloworld.c:140: undefined reference to `PROJECT11_REDUCED_mReadSlaveReg19'
+collect2.exe: error: ld returned 1 exit status
+make: *** [try12.elf] Error 1
+15:18:33 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'ARMOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63948	 197336	  29852	 291136	  47140	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:20:48 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:142:69: error: 'ARM_clocks' undeclared (first use in this function)
+../src/helloworld.c:142:69: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:60:9: warning: unused variable 'o' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+15:22:16 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:168:34: error: expected ')' before 'ARMOutput'
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:34: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+make: *** [src/helloworld.o] Error 1
+15:22:25 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:168:50: error: expected ')' before 'ARMOutput'
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:168:50: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+make: *** [src/helloworld.o] Error 1
+15:23:40 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63884	 197336	  29852	 291072	  47100	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:28:37 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63332	 197336	  29852	 290520	  46ed8	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:32:06 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63332	 197336	  29852	 290520	  46ed8	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:33:45 **** Clean-only build of configuration Debug for project try12 ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  try12.elf.size  try12.elf
+' '
+15:33:45 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63332	 197336	120725276	120985944	7361958	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:34:31 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:36:18 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63332	 197336	120725276	120985944	7361958	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:36:37 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:42:37 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:130:8: error: 'tmp2' undeclared (first use in this function)
+../src/helloworld.c:130:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+15:43:03 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:133:8: warning: left shift count >= width of type [enabled by default]
+../src/helloworld.c:142:8: warning: left shift count >= width of type [enabled by default]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63444	 197336	120725276	120986056	73619c8	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:44:26 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:133:8: warning: left shift count >= width of type [enabled by default]
+../src/helloworld.c:142:8: warning: left shift count >= width of type [enabled by default]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63444	 197336	120725276	120986056	73619c8	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:45:54 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63452	 197336	120725276	120986064	73619d0	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:46:11 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:183:7: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long int' [-Wformat]
+../src/helloworld.c:183:7: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long int' [-Wformat]
+../src/helloworld.c:186:7: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long int' [-Wformat]
+../src/helloworld.c:186:7: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'long int' [-Wformat]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63452	 197336	120725276	120986064	73619d0	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:47:14 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:183:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:183:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:183:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:183:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:186:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:186:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:186:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:186:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63452	 197336	120725276	120986064	73619d0	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:47:20 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:183:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:183:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:183:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:183:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:186:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:186:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:186:7: warning: unknown conversion type character '0' in format [-Wformat]
+../src/helloworld.c:186:7: warning: too many arguments for format [-Wformat-extra-args]
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63460	 197336	120725276	120986072	73619d8	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:48:38 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63452	 197336	120725276	120986064	73619d0	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:48:51 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:50:03 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:68:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:64:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63452	 197336	120725276	120986064	73619d0	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:53:42 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:131:8: error: 'tmp2' undeclared (first use in this function)
+../src/helloworld.c:131:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:125:18: warning: unused variable 'tmps' [-Wunused-variable]
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+make: *** [src/helloworld.o] Error 1
+15:53:49 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63468	 197336	120725276	120986080	73619e0	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:55:08 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:184:7: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:184:7: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63516	 197336	120725276	120986128	7361a10	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:55:20 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63548	 197336	120725276	120986160	7361a30	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:55:31 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+15:59:07 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63548	 197336	120725276	120986160	7361a30	try12.elf
+'Finished building: try12.elf.size'
+' '
+15:59:15 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:05:17 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63524	 197336	120725276	120986136	7361a18	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:05:48 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63508	 197336	120725276	120986120	7361a08	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:06:00 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:07:58 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63388	 197336	120725276	120986000	7361990	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:08:05 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:13:34 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63556	 197336	120725276	120986168	7361a38	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:14:10 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63500	 197336	120725276	120986112	7361a00	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:14:16 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:19:33 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:120:3: error: 'done' undeclared (first use in this function)
+../src/helloworld.c:120:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+16:19:52 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63588	 197336	120725276	120986200	7361a58	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:19:59 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:30:45 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63596	 197336	120725276	120986208	7361a60	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:31:08 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63596	 197336	120725276	120986208	7361a60	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:31:11 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:32:20 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:34:44 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63596	 197336	120725276	120986208	7361a60	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:34:58 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:37:49 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63588	 197336	120725276	120986200	7361a58	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:38:03 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:40:10 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63588	 197336	120725276	120986200	7361a58	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:40:21 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:41:16 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63476	 197336	120725276	120986088	73619e8	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:42:03 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63476	 197336	120725276	120986088	73619e8	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:42:24 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63476	 197336	120725276	120986088	73619e8	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:44:04 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:44:47 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63476	 197336	120725276	120986088	73619e8	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:44:57 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63484	 197336	120725276	120986096	73619f0	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:45:09 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:47:28 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63500	 197336	120725276	120986112	7361a00	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:47:38 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:48:23 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63620	 197336	120725276	120986232	7361a78	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:48:39 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:50:43 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63700	 197336	120725276	120986312	7361ac8	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:50:52 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:51:42 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63620	 197336	120725276	120986232	7361a78	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:56:32 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63628	 197336	120725276	120986240	7361a80	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:57:12 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63636	 197336	120725276	120986248	7361a88	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:57:21 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:58:27 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63620	 197336	120725276	120986232	7361a78	try12.elf
+'Finished building: try12.elf.size'
+' '
+16:58:44 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:02:42 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63484	 197336	120725276	120986096	73619f0	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:02:53 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:03:57 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63484	 197336	120725276	120986096	73619f0	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:04:07 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:10:46 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63516	 197336	120725276	120986128	7361a10	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:12:11 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63524	 197336	120725276	120986136	7361a18	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:12:25 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:14:21 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63524	 197336	120725276	120986136	7361a18	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:14:33 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:16:28 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63540	 197336	120725276	120986152	7361a28	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:16:56 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63676	 197336	120725276	120986288	7361ab0	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:17:17 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:194:7: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:194:7: warning: format '%x' expects a matching 'unsigned int' argument [-Wformat]
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63684	 197336	120725276	120986296	7361ab8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:17:40 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63684	 197336	120725276	120986296	7361ab8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:19:00 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:21:16 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63668	 197336	120725276	120986280	7361aa8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:21:38 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:32:22 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63716	 197336	120725276	120986328	7361ad8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:32:55 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63732	 197336	120725276	120986344	7361ae8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:34:16 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:41:47 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63748	 197336	120725276	120986360	7361af8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:42:06 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+17:43:47 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63684	 197336	120725276	120986296	7361ab8	try12.elf
+'Finished building: try12.elf.size'
+' '
+17:44:03 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:15:20 **** Build of project standalone_bsp_0 ****
+make -k all 
+'Finished building libraries'
+11:15:21 **** Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:17:13 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:17:37 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63668	 197336	120725276	120986280	7361aa8	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:17:46 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:31:20 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63684	 197336	120725276	120986296	7361ab8	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:31:22 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:43:34 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63684	 197336	120725276	120986296	7361ab8	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:44:47 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:135:9: warning: unused variable 'fpga_clks' [-Wunused-variable]
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64844	 197336	120725276	120987456	7361f40	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:45:00 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64820	 197336	120725276	120987432	7361f28	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:45:28 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:48:36 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64820	 197336	120725276	120987432	7361f28	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:50:27 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64476	 197336	120725276	120987088	7361dd0	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:50:38 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+16:12:59 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:9: warning: variable 'hwOutput2' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:62:9: warning: variable 'hwOutput' set but not used [-Wunused-but-set-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64476	 197336	120725276	120987088	7361dd0	try12.elf
+'Finished building: try12.elf.size'
+' '
+10:36:28 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+10:47:52 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:9: warning: unused variable 'bramq' [-Wunused-variable]
+../src/helloworld.c:70:9: warning: unused variable 'bramp' [-Wunused-variable]
+../src/helloworld.c:69:9: warning: unused variable 'bramr' [-Wunused-variable]
+../src/helloworld.c:67:9: warning: unused variable 'ARMOutput' [-Wunused-variable]
+../src/helloworld.c:66:9: warning: unused variable 'final' [-Wunused-variable]
+../src/helloworld.c:65:9: warning: unused variable 'sum' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  63684	 197336	120725276	120986296	7361ab8	try12.elf
+'Finished building: try12.elf.size'
+' '
+10:49:48 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64836	 197336	120725276	120987448	7361f38	try12.elf
+'Finished building: try12.elf.size'
+' '
+10:50:43 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+10:59:45 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:155:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+../src/helloworld.c:155:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+../src/helloworld.c:171:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+../src/helloworld.c:171:5: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64908	 197336	120725276	120987520	7361f80	try12.elf
+'Finished building: try12.elf.size'
+' '
+10:59:53 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:01:41 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64924	 197336	120725276	120987536	7361f90	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:01:49 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:02:41 **** Auto Build of configuration Debug for project try12 ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:4:0:
+../src/PROJECT11_TIMER.h:173:0: warning: "TEST_AXI_LITE_USER_NUM_REG" redefined [enabled by default]
+In file included from ../src/helloworld.c:3:0:
+../src/PROJECT12_REDUCED.h:263:0: note: this is the location of the previous definition
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: try12.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "try12.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: try12.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size try12.elf  |tee "try12.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  64900	 197336	120725276	120987512	7361f78	try12.elf
+'Finished building: try12.elf.size'
+' '
+11:03:08 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.
+11:50:42 **** Incremental Build of configuration Debug for project try12 ****
+make all 
+make: Nothing to be done for `all'.

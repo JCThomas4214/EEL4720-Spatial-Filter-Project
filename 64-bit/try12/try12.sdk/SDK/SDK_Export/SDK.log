@@ -1,0 +1,83 @@
+15:13:54.930 INFO  - Processing command line option -hwspec C:/try12/try12.sdk/SDK/SDK_Export/hw/project12_mod.xml. 
+15:33:45.410 INFO  - Successfully generated C:\try12\try12.sdk\SDK\SDK_Export\try12\src\lscript.ld. 
+15:33:45.412 INFO  - Applying linker script to all configurations of project try12. 
+15:33:45.413 INFO  - Setting rebuild state to true for all configurations of project try12. 
+15:34:11.787 INFO  - FPGA configured successfully with bitstream "C:/try12/try12.sdk/SDK/SDK_Export/project12_mod_hw_platform/system.bit" 
+15:34:35.069 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:34:35.247 INFO  - PS initialization will be done as it is not done before. 
+15:34:35.247 INFO  - Running PS initialization.... 
+15:34:54.097 INFO  - ps7_init is completed. 
+15:34:54.968 INFO  - ps7_post_config is completed. 
+15:34:55.228 INFO  - PS Initialization is complete. 
+15:36:40.739 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:48:54.041 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:55:34.534 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:59:17.838 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:06:02.568 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:08:07.571 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:14:19.051 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:20:01.717 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:31:13.556 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:32:22.831 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:35:00.732 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:38:06.037 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:40:23.650 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:44:06.875 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:45:11.808 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:47:40.752 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:48:41.684 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:50:54.789 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:57:24.178 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:58:47.192 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:02:55.731 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:04:09.985 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:12:28.422 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:14:35.303 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:19:03.124 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:21:40.895 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:34:19.250 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:42:09.279 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:44:05.564 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:53:10.240 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:37:47.765 INFO  - Processing command line option -hwspec C:/try12/try12.sdk/SDK/SDK_Export/hw/project12_mod.xml. 
+10:59:20.706 INFO  - Processing command line option -hwspec C:/try12/try12.sdk/SDK/SDK_Export/hw/project12_mod.xml. 
+11:15:04.298 INFO  - FPGA configured successfully with bitstream "C:/try12/try12.sdk/SDK/SDK_Export/project12_mod_hw_platform/system.bit" 
+11:15:23.943 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:15:24.130 INFO  - PS initialization will be done as it is not done before. 
+11:15:24.146 INFO  - Running PS initialization.... 
+11:15:42.735 INFO  - ps7_init is completed. 
+11:15:43.390 INFO  - ps7_post_config is completed. 
+11:15:43.624 INFO  - PS Initialization is complete. 
+11:17:16.159 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:17:48.965 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:31:25.401 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:45:21.710 INFO  - FPGA configured successfully with bitstream "C:/try12/try12.sdk/SDK/SDK_Export/project12_mod_hw_platform/system.bit" 
+11:45:31.179 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:45:31.350 INFO  - PS initialization will be done as it is not done before. 
+11:45:31.350 INFO  - Running PS initialization.... 
+11:45:48.818 INFO  - ps7_init is completed. 
+11:45:49.427 INFO  - ps7_post_config is completed. 
+11:45:49.707 INFO  - PS Initialization is complete. 
+11:50:40.516 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:13:01.078 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:54:39.463 INFO  - Processing command line option -hwspec C:/try12/try12.sdk/SDK/SDK_Export/hw/project12_mod.xml. 
+10:32:31.689 INFO  - Processing command line option -hwspec C:/try12/try12.sdk/SDK/SDK_Export/hw/project12_mod.xml. 
+10:35:22.672 INFO  - FPGA configured successfully with bitstream "C:/try12/try12.sdk/SDK/SDK_Export/project12_mod_hw_platform/system.bit" 
+10:36:31.368 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:36:31.540 INFO  - PS initialization will be done as it is not done before. 
+10:36:31.540 INFO  - Running PS initialization.... 
+10:36:50.688 INFO  - ps7_init is completed. 
+10:36:51.374 INFO  - ps7_post_config is completed. 
+10:36:51.671 INFO  - PS Initialization is complete. 
+10:50:46.116 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:59:56.320 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:01:51.325 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:03:10.390 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:33:28.010 INFO  - FPGA configured successfully with bitstream "C:/try12/try12.sdk/SDK/SDK_Export/project12_mod_hw_platform/system.bit" 
+11:50:44.313 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:50:44.484 INFO  - PS initialization will be done as it is not done before. 
+11:50:44.484 INFO  - Running PS initialization.... 
+11:51:02.125 INFO  - ps7_init is completed. 
+11:51:02.765 INFO  - ps7_post_config is completed. 
+11:51:03.014 INFO  - PS Initialization is complete. 
+12:46:28.917 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
