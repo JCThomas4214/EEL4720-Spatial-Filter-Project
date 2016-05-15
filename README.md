@@ -9,7 +9,7 @@ This datapath, in total, has a latency of seven clock cycles to output one proce
 
 <h2>Team members</h2>
 <ul style="list-style-type:square">
-	<li>Jason Lewis (<a href="https://github.com/Jason-LewisG">Jason-LewisG</a>)</li>
+	<li>Jason Thomas (<a href="https://github.com/JCThomas4214">JCThomas4214</a>)</li>
 	<li>Jonathan Ganyer (<a href="https://github.com/necrostar">necrostar</a>)</li>
 </ul>
 <h2>Languages</h2>
